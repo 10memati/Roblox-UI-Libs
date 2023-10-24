@@ -1,12 +1,12 @@
-local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/10memati/discord-lib/main/source")()
 
-local win = DiscordLib:Window("discord library")
+local win = DiscordLib:Window("KVP Hub")
 
-local serv = win:Server("Preview", "")
+local serv = win:Server("Lumber Tycoon 2", "")
 
-local btns = serv:Channel("Buttons")
+local btns = serv:Channel("Player")
 
-btns:Button("Kill all", function()
+btns:Button("Walk Speed", function()
 DiscordLib:Notification("Notification", "Killed everyone!", "Okay!")
 end)
 
