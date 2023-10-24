@@ -1,10 +1,10 @@
-local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/10memati/discord-lib/main/source")()
 
-local win = DiscordLib:Window("discord library")
+local win = DiscordLib:Window("KVP Hub")
 
-local serv = win:Server("Preview", "")
+local serv = win:Server("g", "")
 
-local btns = serv:Channel("Buttons")
+local btns = serv:Channel("Player")
 
 btns:Button("Kill all", function()
 DiscordLib:Notification("Notification", "Killed everyone!", "Okay!")
@@ -16,13 +16,13 @@ btns:Button("Get max level", function()
 DiscordLib:Notification("Notification", "Max level!", "Okay!")
 end)
 
-local tgls = serv:Channel("Toggles")
+local tgls = serv:Channel("Game")
 
 tgls:Toggle("Auto-Farm",false, function(bool)
 print(bool)
 end)
 
-local sldrs = serv:Channel("Sliders")
+local sldrs = serv:Channel("Teleport")
 
 local sldr = sldrs:Slider("Slide me!", 0, 1000, 400, function(t)
 print(t)
@@ -32,7 +32,7 @@ sldrs:Button("Change to 50", function()
 sldr:Change(50)
 end)
 
-local drops = serv:Channel("Dropdowns")
+local drops = serv:Channel("Settings")
 
 
 local drop = drops:Dropdown("Pick me!",{"Option 1","Option 2","Option 3","Option 4","Option 5"}, function(bool)
