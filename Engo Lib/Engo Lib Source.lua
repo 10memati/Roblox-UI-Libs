@@ -3,7 +3,7 @@ local mouse = game.Players.LocalPlayer:GetMouse()
 local TS = game:GetService("TweenService")
 local RS = game:GetService("RunService")
 local UIS = game:GetService("UserInputService")
-local Keys = loadstring(game:HttpGet("https://raw.githubusercontent.com/joeengo/roblox/main/AlphanumericKeys.lua"))()
+
 local rainbowvalue = 0.01
 
 -- Themes
@@ -69,23 +69,6 @@ local theme = EngoThemes.Engo
 local old_err = error
 local function error(message)
     old_err("[EngoUILib] "..tostring(message))
-end
-
-
-function getTextFromKeyCode(keycode)
-    for i,v in pairs(Keys) do
-        if v == keycode then
-            return tostring(i), true
-        end
-    end
-    return (keycode.Name)
-end
-
-function isValidKey(keycode)
-    local x, bool = getTextFromKeyCode(keycode)
-    if bool then
-        return true
-    end
 end
 
 local function RelativeXY(GuiObject, location)
